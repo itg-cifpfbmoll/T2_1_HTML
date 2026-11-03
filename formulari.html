@@ -1,0 +1,64 @@
+<!DOCTOPY html>
+<html>
+<body>
+
+<h1>Fomulari</h1>
+<form action="#" method="POST">
+    <fieldset>
+        <legend>Dades Personals</legend>
+        <label for="fname">Nom:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Llinatges:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="email">Correu Electrònic:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="pwd">Contrasenya:</label>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <label for="naixement">Data de Naixement:</label>
+        <input type="date" id="naixement" name="naixement"><br><br>
+        <label for="edat">Edat:</label>
+        <input type="number" id="edat" name="edat" min="16" max="99"><br><br>
+    </fieldset>
+    <fieldset>
+        <legend>Dades Académiques i Preferències</legend>
+            <fieldset>
+                <legend>Torn d'estudi</legend>
+                    <input type="radio" id="matí" name="torn" value="matí">
+                    <label for="matí">Matí</label><br>
+                    <input type="radio" id="tarda" name="torn" value="tarda">
+                    <label for="tarda">Tarda</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Mòduls matriculats</legend>
+                    <input type="checkbox" id="llenguatge_marques" name="mòdul" value="llenguatge_marques">
+                    <label for="llenguatge_marques">Llenguatge de Marques</label><br>
+                    <input type="checkbox" id="programació" name="mòdul" value="programació">
+                    <label for="programació">Programació</label><br>
+                    <input type="checkbox" id="base_dades" name="mòdul" value="base_dades">
+                    <label for="base_dades">Base de Dades</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Nivell d'experiència prèvia</legend>
+                    <label for="experiència">Quanta experència tens?:</label>
+                    <select name="experiència" id="experiència">
+                        <option value="sense">Sense experiència</option>
+                        <option value="bàsic">Bàsic</option>
+                        <option value="intermedi">Intermedi</option>
+                        <option value="avançat">Avançat</option>
+                    </select>
+                    <br><br>
+            </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend>Observacions i Botons</legend>
+            <p><label for="observacions"></label></p>
+            <textarea id="observacions" name="observacions" rows="4" cols="40" placeholder="Observacions..."></textarea>
+            <br>
+            <input type="checkbox" id="privacitat" name="privacitat" value="acceptar" required>
+            <label for="privacitat">Acceptar política de privacitat</label><br><br>
+            <input type="submit" value="submit">
+            <input type="reset"  value="reset">
+     </fieldset>
+</form>
+</body>
+</html>
