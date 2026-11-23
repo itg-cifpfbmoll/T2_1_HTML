@@ -1,0 +1,114 @@
+/*Aplicar selector universal per establir-lo a tota sa pagina*/
+* {
+    box-sizing: border-box
+}
+/*Configuració de body*/
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color:#1e293b;
+    background-color:#f8fafc
+}
+/*Definir regla per .caixa-avis*/
+.caixa-avis {
+    background-color :#dbeafe;
+    margin-bottom: 20px;
+    padding: 15px
+}
+/*Definir caracteristiques de capçalera*/
+#capcalera {
+    text-align: center;
+    color: white;
+    background-color:#0f172a;
+    padding: 20px
+}
+/*Menu horizontal*/
+.menu {
+    display: inline-block;
+    margin-left: 15px
+}
+/*Configuració del contenidor principal*/
+#contingut {
+    width: 85%;
+    max-width: 900px;
+    margin: 20px auto
+}
+/*Crear caixes*/
+.fitxa {
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #cbd5e1;
+    padding: 20px;
+    margin-bottom: 20px
+}
+/*Configurar una etiqueta dins una caixa*/
+.etiqueta-inline {
+    display: inline-block;
+    background-color: #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 4px
+}
+/*Configura els enllaços del menu*/
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px
+}
+/*Aplicar regles solament als fills directes de #contingut*/
+#contingut > * {
+    background-color: white;
+    padding: 25px
+}
+/*Cambiar color i font solament al paragraf que segueix h2*/
+h2 + * {
+    font-weight: bold;
+    color:#0284c7
+}
+/*Cambiar la mida de tots els paragrafs que segueixen despres de h2*/
+h2 ~ * {
+    font-size: 1.05rem
+}
+/*Dona color als enllaços que obrin una nova pestanya. */
+a[href]:not([href$=".pdf"]) {
+    color:#15803d;
+    font-weight: bold
+}
+/*Dona color als enllaços que obrin un arxiu PDF*/
+a[href$=".pdf"] {
+    color:#b91c1c
+}
+/*Efectes al pasar el ratoli sobre els enllaços*/
+.menu a:hover {
+    background-color:#334155;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+/*Configurar l'ultima targeta*/
+.fitxa:last-child {
+    margin-bottom: 0;
+    border-left: 6px solid #0284c7
+}
+/*Afegir una fletxa abans dels tituls de les fitxes*/
+.fitxa h3::before {
+    content: "▸ ";
+    color: #0284c7;
+}
+
+/*Afegir l'etiqueta [PDF] despres del enllaç PDF*/
+a[href$=".pdf"]::after {
+    content: " [PDF]";
+    color: #8B0000;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+/* Destaca la primera lletra del paragraf de introducció*/
+.intro::first-letter {
+    font-size: 1.5rem;
+    color: #0284c7;
+}
+
+
+
+/*Pregunta de reflexió: Quin color de fons mostra el navegador per a .caixa-avis i per què? Què passaria si afegissis !important al fitxer extern?
+Es mostra amb un color rosa pastís pàl·lid, ja que el color es definex dins on es defineix la clase, lo que té prioritat sobre quan es defineix fora de sa clase.
+Si afegisim sa regla !important, es pasaria a tomar com prioritat el fitxer extern.*/
